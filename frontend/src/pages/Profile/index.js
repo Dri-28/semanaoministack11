@@ -15,8 +15,8 @@ export default function Profile() {
 
    const [incidents, setIncidents] = useState([])
 
-   const ngoName = localStorage.getItem('ngoName')
-   const ngoId = localStorage.getItem('ngoId')
+   const ongName = localStorage.getItem('ongName')
+   const ongId= localStorage.getItem('ongId')
 
 
 
@@ -42,7 +42,7 @@ export default function Profile() {
       }).then(response => {
          setIncidents(response.data)
       })
-   }, [ngoId])
+   }, [ongId])
 
    function handleLogout() {
       localStorage.clear()
