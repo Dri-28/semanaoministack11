@@ -24,7 +24,7 @@ export default function Profile() {
       try {
          await api.delete(`incidents/${id}`, {
             headers: {
-               authorization: ngoId
+               authorization: ongId
             }
          })
 
@@ -37,7 +37,7 @@ export default function Profile() {
    useEffect(() => {
       api.get('profile', {
          headers: {
-            authorization: ngoId
+            authorization: ongId
          }
       }).then(response => {
          setIncidents(response.data)
@@ -53,7 +53,7 @@ export default function Profile() {
       <div className="profile-container">
          <header>
             <img src={LogoImg} alt="BeTheHero" />
-            <span>Bem vinda, {ngoName}</span>
+            <span>Bem vinda, {ongName}</span>
 
 
             <Link className="button" to="/incident/new">Cadastrar novo caso</Link>

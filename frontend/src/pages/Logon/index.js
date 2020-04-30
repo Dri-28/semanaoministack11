@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {Link, useHistory} from 'react-router-dom';
 import {FiLogIn }from 'react-icons/fi';
 
@@ -9,7 +9,7 @@ import './styles.css';
 
 import logoImg from '../../assets/logo.svg';
 import heroesImg from '../../assets/heroes.png';
-import { useState } from 'react';
+
 
 export default function Logon() {
   const [id,setId]= useState('');
@@ -43,9 +43,9 @@ export default function Logon() {
         <h1>Faça seu logon</h1>
 
         <input 
-         placeholder="Sua ID"
-         value={id}
-         onChange={e=> setId(e.target.value)}
+                        placeholder="Sua ID"
+                        value={id}
+                        onChange={e => setId(e.target.value)}
         
         />
             <button className="button"type="submit">Entrar</button>
